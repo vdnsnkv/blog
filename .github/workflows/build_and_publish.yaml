@@ -8,7 +8,7 @@ jobs:
     steps:
     - run: npm install markdown-styles
     - uses: actions/checkout@master
-    - run: generate-md --layout github --input ./content --output ./output
+    - run: npx generate-md --layout github --input ./content --output ./output
     - name: copy file via ssh password
       uses: appleboy/scp-action@master
       with:
