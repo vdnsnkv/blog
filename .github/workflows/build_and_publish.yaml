@@ -17,3 +17,4 @@ jobs:
         password: ${{ secrets.OVH_GITHUB_PASSWORD }}
         source: "output/*"
         target: "/var/www/val3k.me"
+        strip_components: 1
