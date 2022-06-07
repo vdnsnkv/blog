@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "markdown-styles": "^3.2.0"
+  },
+  "scripts": {
+    "build": "generate-md --layout github --input ./content --output ./output"
+  }
+}
