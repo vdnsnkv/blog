@@ -18,3 +18,4 @@ jobs:
         source: "output/*"
         target: "/var/www/val3k.me"
         strip_components: 1
+        overwrite: true
