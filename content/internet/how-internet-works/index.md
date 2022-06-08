@@ -418,3 +418,13 @@ BGP — это важный протокол, он позволяет Автон
 Запрос приходит на сервер YouTube внутри Автономной системы Google. Сервер отвечает на запрос и счастливый пользователь смотрит свои любимые видео с котиками.
 
 <iframe height="420" style="width: 100%;" src="https://youtube.com/embed/v_Oht6ZA5SM"> </iframe>
+
+### Материалы
+
+1. Серия коротких видео про Интернет (EN). https://roadmap.sh/guides/what-is-internet
+2. Магистральные сети связи в России. https://www.comnews.ru/content/211042/2020-10-21/2020-w43/magistralnye-seti-svyazi-rossii
+3. Статья на Vox (EN). https://www.vox.com/2014/6/16/18076282/the-internet
+4. Статье на Wired про кабели Google (EN). https://www.wired.com/story/google-cramming-more-data-new-atlantic-cable/
+5. Infrapedia — карта магистральных сетей глобального Интернета. https://www.infrapedia.com/
+6. The Opte Project — проект по визуализации Интернета. https://www.opte.org/the-internet
+7. Карты сети ARPANET в разные годы. http://mercury.lcs.mit.edu/~jnc/tech/arpalog.html 
