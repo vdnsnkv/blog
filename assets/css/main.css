@@ -1889,10 +1889,20 @@ a.tag:hover {
   margin-bottom: 1rem; }
 
 .navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
   padding: 0 5rem;
   min-height: 3.25rem;
   position: relative;
   z-index: 30; }
+  @media screen and (max-width: 600px) {
+    .navbar {
+      flex-direction: column;
+      padding: 0 4rem;
+    }
+  }
   .navbar.is-white {
     background-color: var(--color-bg-sub);
     color: #0a0a0a; }
@@ -2422,7 +2432,8 @@ body.has-navbar-fixed-bottom {
     transform: translateY(-5px) rotate(-45deg); }
 
 .navbar-menu {
-  display: none; }
+  align-items: stretch;
+    display: flex;  }
 
 .navbar-item,
 .navbar-link {
@@ -2508,7 +2519,8 @@ a.navbar-item,
   .navbar-link::after {
     display: none; }
   .navbar-menu {
-    
+    align-items: stretch;
+    display: flex; }
    }
     .navbar-menu.is-active {
       display: block; }

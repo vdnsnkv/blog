@@ -3,7 +3,7 @@ layout: post
 title:  "Как устроен Интернет (Часть 1)"
 date:   2022-07-02 18:30:00 +0600
 categories: internet
-permalink: /internet/how-internet-works
+permalink: /internet/how-internet-works/index.html
 ---
 <figure style="margin-left:15%; margin-right:15%;">
   <img src="/assets/img/internet/internet-13-small.png" alt="The Internet map"/>

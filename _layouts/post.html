@@ -31,12 +31,12 @@
 
 <head>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="Hiran Venugopalan" property="og:site_name" />
+    <meta content="Блог бородатого разработчика" property="og:site_name" />
     <meta
         content="{{ site.description }}"
         property="og:description">
     <meta content="{{ site.url }}/about/" property="article:author">
-    <meta property="og:image" content="../assets/img/OGImg.png">
+    <meta property="og:image" content="/assets/img/index.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap"
@@ -125,7 +125,7 @@
 
 
             <!--- Post Feed Layout-->
-            {%- if page.permalink == "/posts" -%}
+            {%- if page.permalink == "/posts.html" -%}
             <div class="column is-6-widescreen  is-8-desktop is-8-tablet is-12-mobile">
                 <h5 class="meta-title"><a href="/">← Home</a></h5>
                 <div class="jumbo">{{page.title}}</div>

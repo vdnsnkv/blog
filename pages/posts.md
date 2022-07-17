@@ -1,5 +1,5 @@
 ---
 layout: post
-permalink: /posts
+permalink: /posts.html
 title: Все посты
 ---

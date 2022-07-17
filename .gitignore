@@ -8,3 +8,4 @@ yarn.lock
 
 _site
 Gemfile.lock
+.jekyll-cache

@@ -2,6 +2,7 @@
 layout: post
 title:  "Как устроен Интернет (Часть 2)"
 date:   2022-07-03 21:30:00 +0600
+permalink: /posts/how-internet-works-pt2.html
 categories: internet
 ---
 <figure style="margin-left:15%; margin-right:15%;">
