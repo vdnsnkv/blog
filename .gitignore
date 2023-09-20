@@ -1,11 +1,2 @@
-node_modules
-output
-
-*.code-workspace
 .DS_Store
-
-yarn.lock
-
-_site
-Gemfile.lock
-.jekyll-cache
+_old-content/

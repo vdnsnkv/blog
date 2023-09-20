@@ -1,0 +1,20 @@
+baseURL = 'https://val3k.me/'
+languageCode = 'en-us,ru-ru'
+title = 'Блог Кофеинозависимового'
+theme = 'PaperMod'
+
+[languages]
+  [languages.en]
+    disabled = false
+    languageCode = 'en-us'
+    languageName = 'en'
+    title = 'Caffeinated Developer Blog'
+    weight = 0
+    contentDir = 'content/en'
+  [languages.ru]
+    disabled = false
+    languageCode = 'ru-ru'
+    languageName = 'ru'
+    title = 'Блог Кофеинозависимового Разработчика'
+    weight = 1
+    contentDir = 'content/ru'
