@@ -8,53 +8,49 @@ draft = true
 
 ## Introduction
 
-In the first part, we looked at what the Internet is in terms of cables, routers and other infrastructure. We looked at who owns this infrastructure and how it is used to give access to the Internet to 28 billion different devices.
+In the first part, we looked at what the Internet is in terms of cables, routers, and other infrastructure. We looked at who owns this infrastructure and how it connects 28 billion different devices into one giant network.
 
-In Part 2, we will try to understand what people have come up with on top of this infrastructure so that we can find what we need on the network.
+In Part 2, we will try to understand what people have come up with on top of this infrastructure so it is possible to find things on the network.
 
-- [Имя, адрес и маршрут](#имя-адрес-и-маршрут)
-- [Где оно находится](#где-оно-находится)
-- [Немного истории](#немного-истории)
-- [Что же делать](#что-же-делать)
-- [Приватные сети](#приватные-сети)
-- [Виртуальный хостинг](#виртуальный-хостинг)
-- [Что мы ищем](#что-мы-ищем)
-- [Маршрут или как туда добраться](#маршрут-или-как-туда-добраться)
-- [Давайте поделим Интернет](#давайте-поделим-интернет)
+- [Name, address and route](#name-address-and-route)
+- [Where is it located](#where-is-it-located)
+- [A little history](#a-little-history)
+- [What to do](#what-to-do)
+- [Private networks](#private-networks)
+- [Shared hosting](#shared-hosting)
+- [What are we looking for](#what-are-we-looking-for)
+- [Route or how to get there](#route-or-how-to-get-there)
+- [Let's divide the Internet](#lets-divide-the-internet)
 - [Border Gateway Protocol (BGP)](#border-gateway-protocol-bgp)
-- [Всё вместе](#всё-вместе)
+- [Everything together](#everything-together)
 
 ## Name, address and route
 
-First, let's talk a little about how we find the right place in our familiar world. Usually, it all starts with the fact that we know the name or name of the place where we want to go. Let’s say I want to go from my home to the nearest Pyaterochka store to buy groceries and cook lunch for myself.
+First, let us think a little bit about how we find places in our familiar physicall world. Usually, it all starts with us knowing at least the name of the place where we want to go. Suppose I want to go from New York to Massachusetts Institute of Technology in Boston by car.
 
-![Route](/images/how-internet-works/internet-14.png)
+![Route](/images/how-internet-works/internet-14-en.png)
 
-To get to Pyaterochka, I need to find out the address. Let’s say the “Pyaterochka” I need has the following address: 
+To get to MIT, I need first to find out its address. Quick search gives me the following address: 
 
-![Route](/images/how-internet-works/internet-14-1.png)
+![MIT address](/images/how-internet-works/internet-14-1-en.png)
 
-The address indicates first the country, then the city, then the street, and, finally, the house. All this clearly determines the place I need. If you change something in the address, it will be a different place or a non-existent place. For example, if you change the house number in the address, for example to 12, then it will be 12 Novogireevskaya Street, that is, a different house. If you change the name of the street - for example, to Tverskaya Street - you will get Tverskaya Street, 11. This will be a place in the same city, but in a completely different area. And so on, if you change the city or country in the address, then most likely there will be no such place at all.
+This address contains everything I need to know to identify a place — country, city, street, and a house number. All this information uniquely determines the place I need. If we change something in the address, it will be a different place (or even a non-existent one). For example, suppose we change the house number in the MIT address to 190. Then the address will change to 190 Massachusetts Ave, Cambridge. This will not be MIT but Flour Bakery + Cafe. It is still in Cambridge and not that far from MIT, but it is a different place. If we change the name of the street - for example, to Mt. Auburn Street - we will get 70 Mt Auburn St. This is still in the same city, but already pretty far from MIT, like a half-hour walk. And so on, if we change city or country in the address, then chances are there will be no such place at all. 77 Massachusetts Ave, Cambridge, France — a place with this address does not exist.
 
-Thus, the combination of country, city, street and house number gives us a unique combination that indicates the house we need. That is, each address corresponds to one specific house, and each house has one specific address.
+All this show that a set of country, city, street and house number gives us a unique combination that indicates the building we need. In other words, each address corresponds to one specific building or place, and each place has one specific address.
 
-To get to the right address, you need one more thing - a route. A route is a sequential set of points through which you need to pass. For example, my route to Pyaterochka could look like this:
+To get to the right address, you need one more thing - a route. A route is a sequential set of points you need to pass through to get to your destination. For example, Google Maps gives the following route from New York to MIT:
 
-1. Exit from the entrance
-2. 3rd Vladimirskaya street
-3. Metallurgov Street
-4. Novogireevskaya street
-5. Novogireevskaya street 11
+![Route](/images/how-internet-works/internet-14-2-en.png)
 
-That is, for orientation in the physical world it is important to know three things:
+To sum up, for orientation in the physical world it is necessary to know three things:
 
-**Name** - What we are looking for
+**Name** - What are we looking for
 
-**Address** - Where is it located?
+**Address** - Where is it located
 
 **Route** - How to get there
 
-The same concepts work on the Internet, and a special system or protocol is responsible for each of them on the Internet:
+The same concepts apply to the Internet, and there is a protocol for each of them:
 
 **Name** - Domain Name System (DNS)
 
@@ -68,30 +64,30 @@ First, let's figure out how Internet addresses work.
 
 We have a good idea of ​​how an address works in our physical world. If YouTube were a physical place where you come and watch videos, then its address would probably look something like this:
 
-![Address 1](/images/how-internet-works/internet-15.png)
+![Address 1](/images/how-internet-works/internet-15-en.png)
 
-But since YouTube is NOT a physical place, but a video resource on the Internet, its address looks like this:
+But YouTube is NOT a physical place. It is a video hosting resource on the Internet. So its address looks like this:
 
 ![Address 2](/images/how-internet-works/internet-16.png)
 
-This is the IP address. IP is the abbreviation for the protocol that governs addressing on the Internet. This protocol is called not very intricately - Internet Protocol.
+This is an IP address. IP is an abbreviation of the name of the protocol that is responsible for addressing on the Internet. The name itself is not very creative. It is called Internet Protocol.
 
-For people from the IT sector, who quite often come across IP addresses, these addresses are already quite familiar. But at the first meeting, it seems to me that they may have many questions:
+People from the tech industry encounter IP addresses quite often and so these addresses may seem quite familiar. But someone looking at IP addresses for the first time may have many questions:
 
 - What do all these numbers mean?
 - And why are there numbers here anyway?
-- Why can't we make some more understandable address?
-- How can you even figure out where it is from this address?
+- Why can't we write this addresses in more understandable way?
+- How can you even figure out where the place is from this address?
 
-In fact, this address is very clear. It’s just that it’s understandable not to a person, but to a computer. An IP address is needed so that computers can find each other on the vast Internet, so IP addresses must be well understood primarily by computers, and people have to adapt. Even writing an IP address as four groups of three digits (as above) is a very “humanized” notation. On the computer itself, the address looks like this: 
+In fact, this address is very clear. It's just that it is clear to a computer, not to a person. An IP address is needed so that computers can find each other on the vast Internet. And so IP addresses must be well understood primarily by computers, and people have to adapt. Even writing an IP address fomatted as four groups of three digits (as above) is a very "humanized" notation. Inside the computer the address looks like this: 
 
 ![Address 3](/images/how-internet-works/ip-2.png)
 
-Computers generally only understand bits and the binary number system, so each IP address is a set of 32 zeros or ones. For us, people, it is divided into four parts, and even translated into the decimal system familiar to us. It’s still not very convenient, but working with four numbers is still easier than remembering 32 zeros and ones every time.
+Computers generally only understand bits and the binary number system, so each IP address is a set of 32 zeros and ones. For us people, it is split into four parts and then translated into the decimal system familiar to us. It is still not very convenient, but working with four decimal numbers is still much easier than remembering 32 zeros and ones every time.
 
-By the way, since an IP address consists of 32 zeros and ones, this means that there can be a total of 4.3 billion unique IP addresses. At the same time, at the very end of the first part, where there was a beautiful picture with a visualization of the Internet, we talked about the fact that 28 billion devices are now connected to the Internet. How so? There are 28 billion devices, but only 4 billion addresses? After all, in theory, every device on the network should have a unique address so that others can find it?
+By the way, since an IP address consists of 32 zeros and ones, there can be a total of 4.3 billion unique IP addresses. At the same time, at the very end of Part 1 there was a beautiful picture with a visualization of the Internet. We talked about how the Internet has 28 billion devices connected to it. But how is this possible? There are 28 billion devices, but only 4 billion addresses? After all, every device on the network should have a unique address so that others can find it. Or maybe not?
 
-To understand how this happened and how the Internet still continues to work, although there are 7 times more devices than unique addresses, you need to delve a little into history.
+To understand how this is possible and how the Internet still continues to work, although there are 7 times more devices than unique addresses, we need to delve a little into history.
 
 ### A little history
 
@@ -227,7 +223,7 @@ In this diagram, AS1 could be, for example, Google, AS2 could be Rostelecom, and
 
 BGP is an important protocol, it allows Autonomous Systems to find other Autonomous Systems across the vast Internet. The protocol is important, and therefore the cost of errors in its settings is very high. Bugs in BGP can cause entire huge networks to disappear from the Internet. For example, this happened with Facebook’s Autonomous System in early October 2021. Errors in BGP settings led to the fact that other Autonomous Systems stopped seeing Facebook's network. As a result, all their services were unavailable for 6 hours. At the same time, the servers themselves were working and were ready to receive traffic, but no one knew where to send this traffic.
 
-### Together
+### Everything together
 
 So, we learned how the Internet works physically, then we figured out how names, addresses and routes work. Now let's try to combine all this into one picture.
 
